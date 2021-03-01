@@ -1,0 +1,24 @@
+<div class=background-image>
+<h1>Person Details</h1>
+<table class="content-table">
+ <thead>
+    <tr>
+        <th>Name</th>
+        <th>Phone No</th>
+        <th>Email</th>
+        <th>Message</th>
+    </tr>
+ </thead>
+ <tbody>
+    <tr *ngFor="let item of details">
+        <td>{{item.name}}</td>
+        <td>{{item.phoneNo}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.message}}</td>
+        
+
+    </tr>
+</tbody>
+</table>
+
+</div>

@@ -1,0 +1,70 @@
+<div class=background-image>
+
+<div class=contact-title>
+
+    <h1>CONTACT US</h1>
+    <h2>We would love to hear from you!</h2>
+   </div>
+
+   <div  class="contact-form">
+     <form id="contact-form" [formGroup]="enquiryForm" (ngSubmit)=" submit()">
+      
+      <!--..........NAME.................. -->
+      <div class="mb-3">
+         <input type="text"class="form-control" formControlName="name" name="name" placeholder="Your Name " ><br>
+         <label for="" *ngIf="enquiryForm.get('name')?.touched && enquiryForm.get('name')?.errors?.required" 
+         style="color: red;" id="Ninvalid" class="form-text"> name is required</label>
+      </div>
+      <!--............PHONE NO................ -->
+
+      <div class="mb-3">
+         <input type="text"class="form-control" formControlName="phoneNo" name="phoneNo" placeholder="Mobile no or Lane no"><br>
+        
+         <div *ngIf=" enquiryForm.get('phoneNo')?.touched && enquiryForm.get('phoneNo')?.errors">
+
+          <label for="" *ngIf="enquiryForm.get('phoneNo')?.errors?.required" style="color: red;"  id="Pinvalid" class="form-text"> phone number is required</label>
+          <label for="" *ngIf="enquiryForm.get('phoneNo')?.errors?.pattern" style="color: red;"  id="Pinvalid" class="form-text">phoneNo  give properly</label> 
+       
+         </div>
+
+      </div>
+      <!--............EMAIL................ -->
+       
+      <div class="mb-3">
+         <input type="email"class="form-control"  formControlName="email" name="email" placeholder="Your Email" ><br>
+        
+         <div *ngIf=" enquiryForm.get('email')?.touched && enquiryForm.get('email')?.errors">
+
+          <label for="" *ngIf="enquiryForm.get('email')?.errors?.required" style="color: red;"  id="Einvalid" class="form-text"> email is required</label>
+           <label for="" *ngIf="enquiryForm.get('email')?.errors?.pattern" style="color: red;"  id="Einvalid" class="form-text">please give properly</label> 
+       
+         </div>
+
+
+        </div>
+        <!--...........MESSSAGE................. -->
+
+        <div class="mb-3">
+         <textarea class="form-control" formControlName="message" name="message" placeholder="Message" rows="4" ></textarea><br>
+         
+         <div *ngIf=" enquiryForm.get('message')?.touched && enquiryForm.get('message')?.errors">
+
+             <label for="" *ngIf="enquiryForm.get('message')?.errors?.required" style="color: red;"  id="Minvalid" class="form-text"> message is required</label>
+              <label for="" *ngIf="enquiryForm.get('message')?.errors?.minlength" style="color: red;"  id="Minvalid" class="form-text">message must be 
+             atleast 5 characters</label> 
+
+         </div>
+
+        </div>
+        <!--............SUBMIT................ -->
+
+         
+         <input type="submit"class="form-control submit" value="SEND MESSAGE" >
+        
+
+
+     </form>
+
+   </div>
+</div>   
+
