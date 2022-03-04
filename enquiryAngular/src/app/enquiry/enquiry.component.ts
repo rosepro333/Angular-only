@@ -13,7 +13,7 @@ export class EnquiryComponent  implements OnInit {
 
   enquiryForm=this.fb.group({
 
-  
+    
     name:["" ,[Validators.required]],
     phoneNo:[  ,[Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
     email:["" ,[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
@@ -50,7 +50,7 @@ submit(){
               const email=this.enquiryForm.value.email;
               const message=this.enquiryForm.value.message;
               
-             // alert(name);
+             //alert(name);
               //alert(phoneNo);
               //alert(email);
               //alert(message);

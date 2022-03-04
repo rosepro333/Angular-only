@@ -1,0 +1,77 @@
+.title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+.bt1{
+    width:30px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(228, 7, 7);
+    outline: none;
+    border:none;
+    color:#fff;
+    font-size: 14px;
+    cursor:pointer;
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .2),
+                 inset -2px -5px 15px rgba(138, 187, 206, 0.5);
+   
+ }
+ .bt1:active{
+   box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .1),
+   inset -2px -5px 15px rgba(0, 0, 0, .5);
+   
+ }
+ .qty{
+    width: 50px;
+    margin:0 8px;
+    border:none;
+    outline: none;
+    background-color: rgb(22, 24, 24);
+    text-align: center;
+    padding: 5px 0px;
+    color:white;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  .person{
+      border-radius: 10px;
+      border: 1px solid rgb(185, 94, 94);
+      padding: 1%;
+      width: 25%;
+      
+  }
+  .name{
+      text-align: center;
+      font-size: 18px;
+      font-weight: 500;
+      margin: 4px;
+  }
+  .count{
+    /* text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 4px;
+    background-color: aqua;
+    border-radius: 100px;
+     min-width: 30px;
+    padding: 5px; */
+    width: 100px;
+    margin:20px 80px;
+    border:none;
+    outline: none;
+    background-color: rgb(30, 16, 221);
+    text-align: center;
+    padding: 5px 0px;
+    color:white;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  .calc{
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 4px;
+  }

@@ -7,7 +7,8 @@ import { Injectable } from '@angular/core';
 export class BankService {
  
 
-  accountDetails:any = {
+  accountDetails:any =
+   {
     userone:{accno:1000,name:"ajay",bal:10000,username:"userone",password:"Test111*",history:[]},
     usertwo:{accno:1001,name:"sajay",bal:20000,username:"usertwo",password:"test222",history:[]},
     userthree:{accno:1002,name:"vijay",bal:30000,username:"userthree",password:"test333",history:[]}
@@ -18,18 +19,21 @@ export class BankService {
 
       let dataset=this.accountDetails;
                     
-         if(uname in dataset){
-         if(dataset[uname].password==pwd){
-                               
-                 return 1;//valid user name and password
-                    
-                 }
-         else{
-                               
-                  return 0;//inavlid password
-             }
-                       
-         }
+         if(uname in dataset)
+               {
+               if(dataset[uname].password==pwd)//  dataset[userone].password=Test111*
+                                             //  Test111*
+               {
+                                    
+                     return 1;//valid user name and password
+                        
+                     }
+               else{
+                                    
+                        return 0;//inavlid password
+                  }
+                           
+               }
       else{
               return -1;//no user exsist
                     
@@ -47,7 +51,7 @@ export class BankService {
         if (user==1){
 
          //to avoid the issue of amount appending we use parseInt()....parseInt(amt)
-          dataset[uname].bal+=amt;
+          dataset[uname].bal+=amt;// dataset[uname].bal= dataset[uname].bal+amt
           dataset[uname].history.push({
              amount:amt,transactionType:"credit"
           });

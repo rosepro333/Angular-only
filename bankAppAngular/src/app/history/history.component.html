@@ -1,4 +1,4 @@
-<table>
+<!-- <table>
     <tr>
         <td>amount</td>
         <td>type of transaction</td>
@@ -11,4 +11,33 @@
 
     </tr>
 
-</table>
+</table> -->
+<div>
+    <div class="title">Election Count</div>
+    <div class="container" fxLayoutGap="16px">
+        <div class="first-section" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="16px">
+            <div class="person"> 
+                <div class="name">Abraham</div>
+                <div class="count">{{perCount}}</div> 
+                <div class="calc">
+                    <button class="bt1" (click)="subCount(1)">-</button>
+                    <input type="text" disabled  [value]="perCount" class="qty">
+                    <button class="bt1" (click)="addCount(1)">+</button>
+                </div> 
+            </div>
+
+            
+        </div>
+        <div class="second-section" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="16px" >
+
+            
+        </div>
+
+    </div>
+
+
+
+
+
+
+</div>
